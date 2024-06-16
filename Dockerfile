@@ -42,8 +42,6 @@ RemoteIPTrustedProxy 127.0.0.0/8
 RemoteIPTrustedProxy ::1/128
 EOT
 
-VOLUME /var/www/html
-
 ENV ADMIN_PHP cmsadmin.php
 
 EXPOSE 80
