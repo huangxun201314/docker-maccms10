@@ -7,7 +7,6 @@ if [ ! -f index.php ]; then
     chmod a+rw -R application runtime upload static addons
     unzip template/cmsV10.zip -d template
     rm -rf template/cmsV10.zip
-    RUN pwd
     echo "maccms10 downloaded"
 fi
 
