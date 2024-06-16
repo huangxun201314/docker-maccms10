@@ -10,6 +10,8 @@ COPY docker-entrypoint.sh /entrypoint.sh
 
 ENV REPO_URL https://github.com/huangxun201314/maccms10.git
 
+RUN pwd
+
 RUN set -ex \
     && apt-get update && apt-get install -y \
        git \
