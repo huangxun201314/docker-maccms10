@@ -23,6 +23,8 @@ RUN set -ex \
         --with-freetype \
         --with-jpeg \
         --with-webp \
+    && pecl install redis-5.3.7 \
+    && docker-php-ext-enable redis \
     && docker-php-ext-install -j$(nproc) gd \
     && apt-get autoremove -y \
     && apt-get clean \
