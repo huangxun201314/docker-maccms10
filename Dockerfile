@@ -10,8 +10,6 @@ COPY docker-entrypoint.sh /entrypoint.sh
 
 ENV REPO_URL https://github.com/huangxun201314/maccms10.git
 
-RUN pwd
-
 RUN set -ex \
     && apt-get update && apt-get install -y \
        git \
@@ -44,7 +42,7 @@ RemoteIPTrustedProxy 127.0.0.0/8
 RemoteIPTrustedProxy ::1/128
 EOT
 
-WORKDIR /var/www/html
+VOLUME /var/www/html
 
 ENV ADMIN_PHP cmsadmin.php
 
